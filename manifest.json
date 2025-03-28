@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Search Filter",
+  "version": "1.0",
+  "description": "Filter Amazon search results based on brand evaluation using the Gemini API.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/s*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}
