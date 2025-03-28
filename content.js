@@ -62,7 +62,7 @@
   }
   
   // Build a single prompt for Gemini that asks for a JSON mapping of each brand to "keep" or "delete"
-  const promptText = `For the following brand names: ${uniqueBrands.join(', ')}\nReturn a JSON object where each key is a brand name and its value is either "keep" or "delete". Only return valid JSON.`;
+  const promptText = `For the following brand names: ${uniqueBrands.join(', ')}\nReturn a JSON object where each key is a brand name and its value is either "keep" or "delete". Only return valid JSON. Determine whether the name is a real brand. Among other things, fake brands tend to use all uppercase or all lowercase letters, made up words, or simple phrases. Real brands are recognizable retailers.`;
   
   try {
     // Call the Gemini API using the correct endpoint and request structure.
